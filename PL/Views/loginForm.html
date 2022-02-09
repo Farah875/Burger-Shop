@@ -1,0 +1,98 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>Sign up</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link rel="stylesheet" type="text/css" href="../Styles/loginStyle.css">
+</head>
+<body>
+
+<div id="burgerImg">
+    <img src="../Assests/BURGER.png">
+</div>
+<div id="container">
+
+    <div id="switch">
+        <h1><a href="#" id="switchLogin">LOGIN</a>|<a href="#" id="switchSignup">SIGNUP</a></h1>
+    </div>
+
+     <div class="login">
+         <h2>Welcome back to your burgers lover</h2>
+
+         <form class="form" id="login">
+
+             <label for="email">Email</label>
+             <input name="email" type="text" class="email" required>
+
+             <label for="pass">Password</label>
+             <input class="password" name="pass" type="password" required>
+
+
+             <input type="submit" class="login btn btn-primary" name="SubmitButtonLogIn" value="submit">
+         </form>
+         <a id="forgetPass" href="forgetPass.php" >Forget Password?</a>
+
+     </div>
+
+
+
+   <div class="signup">
+       <h2>Are you hungry? Join the love now!!</h2>
+<!--       <form class="form" id="signup" method="post" action="signup.php">-->
+       <form class="form" id="signup">
+           <label for="username">Username</label>
+           <input name="username" type="text" class="username" required>
+
+           <label for="email">Email</label>
+           <input name="emailS" type="text" class="email" required>
+
+           <label for="phone">Phone Number</label>
+           <input class="phone" name="phone" type="text" required>
+
+           <label for="password">Password</label>
+           <input class="password" name="password" id="password" type="password" required>
+
+           <label for="conpass">Confirm Password</label>
+           <input class="conpass" name="conpass" type="password" required>
+
+           <input type="submit" class="submit btn btn-primary" name="SubmitButtonSignUP" value="submit">
+       </form>
+   </div>
+
+
+    <div id="divLoader"></div>
+
+
+</div>
+<script src="../Scripts/jquery-3.5.1.js"></script>
+<script src="../Scripts/jquery_validate.js"></script>
+<script src="../Scripts/Signup.js"></script>
+<script src="../Scripts/Login.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $("#divLoader").hide();
+
+        $(".signup").hide();
+
+        $("#switchSignup"). click(function()
+        {
+            $(".login").hide();
+            $("#container").css("margin-top"," 5%");
+            $(".signup").show();
+        });
+
+        $("#switchLogin"). click(function()
+        {
+            $(".login").show();
+            $("#container").css("margin-top"," 10%");
+            $(".signup").hide();
+        });
+
+    });
+</script>
+
+</body>
+
+
+</html>
